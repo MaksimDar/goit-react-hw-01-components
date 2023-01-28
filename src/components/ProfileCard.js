@@ -1,35 +1,45 @@
+import PropTypes from 'prop-types';
+import {
+  Card,
+  CardList,
+  CardInfo,
+  CardImage,
+  CardInfoSpan,
+  CardInfoResult,
+} from './ProfileCard.styled';
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src={avatar}
-          alt="User avatar"
-          class="avatar"
-          width="200"
-          height="200"
-        />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <Card>
+      <div>
+        <CardImage src={avatar} alt="User avatar" width="240" height="240" />
+        <CardInfo>{username}</CardInfo>
+        <CardInfo>{tag}</CardInfo>
+        <CardInfo>{location}</CardInfo>
       </div>
 
-      <ul class="stats">
+      <CardList>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <CardInfoSpan>Followers</CardInfoSpan>
+          <CardInfoResult>{stats.followers}</CardInfoResult>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <CardInfoSpan>Views</CardInfoSpan>
+          <CardInfoResult>{stats.views}</CardInfoResult>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <CardInfoSpan>Likes</CardInfoSpan>
+          <CardInfoResult>{stats.likes}</CardInfoResult>
         </li>
-      </ul>
-    </div>
+      </CardList>
+    </Card>
   );
 };
 
 export default Profile;
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+};
