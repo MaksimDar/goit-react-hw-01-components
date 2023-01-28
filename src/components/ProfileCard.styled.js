@@ -30,6 +30,7 @@ const CardInfoSpan = styled.span`
 `;
 const CardInfoResult = styled.p`
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.5;
   justify-content: center;
 `;
