@@ -1,19 +1,31 @@
-import { MainInfo, StatisticSection } from './Statistics.styled';
+import {
+  MainInfo,
+  StatisticSection,
+  StatisticsList,
+  StatisticsItem,
+} from './Statistics.styled';
+import PropTypes from 'prop-types';
 const Statistics = ({ title, stats }) => {
   return (
     <StatisticSection>
       {title.length > 0 && <h2>{title}</h2>}
 
-      <ul>
+      <StatisticsList>
         {stats.map(stat => (
           <li key={stat.id}>
             <MainInfo>{stat.label}</MainInfo>
-            <span>{stat.percentage}%</span>
+            <StatisticsItem>{stat.percentage}%</StatisticsItem>
           </li>
         ))}
-      </ul>
+      </StatisticsList>
     </StatisticSection>
   );
+};
+
+Statistics.propTypes = {
+  id: PropTypes.node,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };
 
 export default Statistics;
