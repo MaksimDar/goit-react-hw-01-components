@@ -1,7 +1,11 @@
 import AppProfile from './App';
 
 const App = () => {
-  return <AppProfile />;
+  return (
+    <div>
+      <AppProfile />
+    </div>
+  );
 };
 
 export default App;
