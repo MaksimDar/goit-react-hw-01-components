@@ -10,8 +10,8 @@ const MainInfo = styled.span`
 const StatisticSection = styled.section`
   display: flex;
   width: 100%;
-  justify-content: center;
-  flex-direction: column;
+
+  flex-start: start;
 `;
 const StatisticsList = styled.ul`
   list-style: none;
