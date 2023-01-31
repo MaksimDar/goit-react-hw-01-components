@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 const Statistics = ({ title, stats }) => {
   return (
     <StatisticSection>
-      {title.length > 0 && <StatisticHeader>{title}</StatisticHeader>}
+      {title && <StatisticHeader>{title}</StatisticHeader>}
 
       <StatisticsList>
         {stats.map(({ id, label, percentage }) => (
