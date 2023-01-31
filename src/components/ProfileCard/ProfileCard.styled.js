@@ -22,16 +22,31 @@ const CardInfo = styled.p`
   font-weight: bold;
   line-height: 1.5;
 `;
+const CardLocation = styled.p`
+  font-size: 20px;
+  line-height: 1.5;
+  color: #00ff00;
+`;
 const CardInfoSpan = styled.span`
   font-size: 20px;
   font-weight: semi-bold;
   line-height: 1.5;
   justify-content: center;
+  color: #d2691e;
 `;
 const CardInfoResult = styled.p`
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
   justify-content: center;
+  color: #ff4500;
 `;
-export { Card, CardList, CardInfo, CardImage, CardInfoSpan, CardInfoResult };
+export {
+  Card,
+  CardList,
+  CardInfo,
+  CardImage,
+  CardInfoSpan,
+  CardInfoResult,
+  CardLocation,
+};

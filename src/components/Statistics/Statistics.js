@@ -3,12 +3,13 @@ import {
   StatisticSection,
   StatisticsList,
   StatisticsItem,
+  StatisticHeader,
 } from './Statistics.styled';
 import PropTypes from 'prop-types';
 const Statistics = ({ title, stats }) => {
   return (
     <StatisticSection>
-      {title.length > 0 && <h2>{title}</h2>}
+      {title.length > 0 && <StatisticHeader>{title}</StatisticHeader>}
 
       <StatisticsList>
         {stats.map(stat => (
@@ -23,9 +24,7 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  id: PropTypes.node,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
 };
 
 export default Statistics;

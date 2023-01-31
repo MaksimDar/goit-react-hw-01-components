@@ -9,15 +9,13 @@ import {
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <FriendItem>
-        <StatusCircule>
-          {isOnline === true ? <GreenCircle /> : <RedCircle />}
-        </StatusCircule>
-        <img src={avatar} alt={name} width="48" height="48" />
-        <FriendName>{name}</FriendName>
-      </FriendItem>
-    </div>
+    <FriendItem>
+      <StatusCircule>
+        {isOnline === true ? <GreenCircle /> : <RedCircle />}
+      </StatusCircule>
+      <img src={avatar} alt={name} width="48" height="48" />
+      <FriendName>{name}</FriendName>
+    </FriendItem>
   );
 };
 

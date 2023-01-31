@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FriendItem = styled.li`
+const FriendItem = styled.div`
   width: 160px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -13,7 +13,6 @@ const FriendItem = styled.li`
 const List = styled.ul`
   list-style: none;
 `;
-
 const GreenCircle = styled.div`
   border-radius: 50%;
   width: 10px;
